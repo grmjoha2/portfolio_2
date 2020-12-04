@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+.row {max-width: 83%; margin: 0 auto;}
+body {position: fixed; width: 100%; height: 100%; background: #f7f0e8;}
+.wrap {position: fixed; width: 100%; height: 100%; background: #f7f0e8; top: 0; left: 0; min-width: 1230px; min-height: 780px;}
+
+/* header */
+#header {position: fixed; padding: 20px 0; left: 0; width: 100%; z-index: 5;}
+#header > div {position: relative;}
+#header .navBox {position: absolute; top: 50%; left: 140px; transform: translateY(-50%); text-align: center; z-index: 2;}
+#header .navBox a {display: block;}
+#header .navBox .depth1 > li {display: inline-block; vertical-align: top; position: relative;}
+#header .navBox .depth1 > li:before {content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 300%; background: #fcb040; margin-bottom: 10px; opacity: 0; transition: 0.3s ease;}
+#header .navBox .depth1 > li > a {font-size: 1.1rem; font-weight: bold; color: #333; padding: 15px 18px; position: relative;}
+#header .navBox .depth1 > li:first-child > a:before {display: none;}
+#header .navBox .depth2 {position: absolute; top: 100%; width: 160px; line-height: 2rem; background: #fff; padding: 10px 12px; border: 1px solid rgba(0,0,0,.2); font-size: 0.9rem; text-align: left; display: none; z-index: 6;}
+#header .navBox .depth1 > li:first-child .depth2,
+#header .navBox .depth1 > li:nth-child(2) .depth2,
+#header .navBox .depth1 > li:nth-child(3) .depth2,
+#header .navBox .depth1 > li:nth-child(4) .depth2
+{left: 50%; transform: translateX(-50%);}
+#header .navBox .depth1 > li:last-child .depth2 {right: 50%; transform: translateX(50%);}
+#header .navBox .depth2 > li {border-top: 1px solid rgba(0,0,0,.1);}
+#header .navBox .depth2 > li:first-child {border-top: none;}
+#header .navBox .depth2 > li a {padding: 3px 0; transition: 0.3s ease;}
+/* hover */
+#header .navBox .depth1 > li.on:before {opacity: 1;}
+#header .navBox .depth1 > li.on > a {color: #fff;}
+#header .navBox .depth1 > li .depth2 > li:hover {background: #303030;}
+#header .navBox .depth1 > li .depth2 > li:hover a {text-indent: 1rem; color: #fff;}
+#header .searchBox {position: absolute; right: 120px; top: 50%; transform: translateY(-50%);}
+#header .searchBox fieldset {background: #feefd9; height: 43px; border-radius: 50px; padding-right: 18px;}
+#header .searchBox input {width: 166px; height: 43px; background: transparent; padding: 0 1.5rem;}
+#header .searchBox input::placeholder {font-size: 0.9rem; color: rgba(52,25,0,.3);}
+#header .searchBox button {background: transparent; color: #fcb040; vertical-align: middle; font-size: 1.3rem;}
+#header .logBox {position: absolute; right: 0; top: 50%; transform: translateY(-50%); line-height: 43px;}
+#header .logBox a {padding: 0 10px 0 0; position: relative; transition: 0.2s ease;}
+#header .logBox a i {display: none; color: #555; font-size: 1.4rem;}
+#header .logBox a span {font-size: 0.8rem; display: inline-block;}
+#header .logBox a:last-child span {padding: 0 0 0 7px;} 
+#header .logBox a:first-child span:before {content: ''; position: absolute; top: 50%; right: 0; width: 1px; height: 13px; transform: translateY(-50%); background: rgba(0,0,0,.4); margin-top: 2px;}
+#header .logBox a:hover {color: rgba(255,255,255,.8);}
+
+/* section */
+#container .mainContent {position: fixed; width: 100%; height: 100%;}
+#container .mainContent .titBox h2 > div {position: absolute; display: inline-block; width: 82%; height: 160%; margin-top: -26%; margin-left: 40%; border-radius: 50%;}
+#container .mainContent .titBox h2 > div:first-child {background: transparent;}
+#container .mainContent .titBox h2 > div:last-child {background: #fcb040; overflow: hidden;}
+#container .mainContent .titBox h2 > div > span {position: absolute; display: inline-block; width: 100%; height: 100%; top: 43%; left: -35%; line-height: 8.2rem; font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 9rem;}
+#container .mainContent .titBox h2 > div p {position: absolute; top: 63%; left: -35%; color: #444; letter-spacing: -0.5px; line-height: 1.5rem;}
+#container .mainContent .titBox h2 > div:first-child > span {color: #fcb040;}
+#container .mainContent .titBox h2 > div:last-child > span {color: #fff;}
+#container .mainContent .titBox .dotImg {margin-top: 42%; margin-left: 13%;}
+#container .mainContent .titBox .dotImg span {display: inline-block; width: 1vw; height: 1vw; background: rgba(255,255,255,.4); border-radius: 50%; margin: 0 2% 1.5% 0;}
+/* cake */
+#container .mainContent .cakeSlide .cakeImg {position: absolute; width: 43%; height: 100%; right: 0; top: 0;}
+#container .mainContent .cakeSlide .cakeImg ul {position: relative; width: 100%; height: 59%; top: 19%; perspective: 1000px;}
+#container .mainContent .cakeSlide .cakeImg li {position: absolute; opacity: 0; transform: translateZ(-3000px);}
+#container .mainContent .cakeSlide .cakeImg li span {position: absolute; display: inline-block; width: 480px; height: 130px; border-radius: 50%; background: #7a3b00; bottom: 0; filter: blur(40px); opacity: 0; transition: 1s ease;}
+#container .mainContent .cakeSlide .cakeImg li img {position: relative;}
+#container .mainContent .cakeSlide .cakeImg li.on {opacity: 1; transform: translateZ(0px); filter: blur(0px); z-index: 2;}
+#container .mainContent .cakeSlide .cakeImg li.on span {opacity: 0.3;}
+#container .mainContent .cakeSlide .cakeImg li.next {opacity: 1; transform: translateZ(-1500px); filter: blur(10px);}
+#container .mainContent .cakeSlide .cakeImg li.prev {opacity: 0; transform: translateZ(1000px); filter: blur(10px); z-index: 3;}
+/* control */
+#container .mainContent .cakeSlide .control {position: absolute; bottom: 19%; right: 8%; z-index: 3;}
+#container .mainContent .cakeSlide .control > div {display: inline-block; color: #fff; vertical-align: middle;}
+#container .mainContent .cakeSlide .control .playBtn {font-size: 1.1rem;}
+#container .mainContent .cakeSlide .control .playBtn .play {display: none;}
+#container .mainContent .cakeSlide .control .timerBox {position: relative; width: 28px; height: 28px; margin: 0 10px 0 5px; vertical-align: middle;}
+#container .mainContent .cakeSlide .control .timerBox .outer > div, 
+#container .mainContent .cakeSlide .control .timerBox .outer .rect
+{position: absolute; height: 28px; width: 14px; overflow: hidden;}
+#container .mainContent .cakeSlide .control .timerBox .outer .right {right: 0;}
+#container .mainContent .cakeSlide .control .timerBox .outer .left {left: 0;}
+#container .mainContent .cakeSlide .control .timerBox .outer .right .rect {transform-origin: 0% 50%; transform: rotate(-180deg);}
+#container .mainContent .cakeSlide .control .timerBox .outer .left .rect {transform-origin: 100% 50%; transform: rotate(-180deg);}
+#container .mainContent .cakeSlide .control .timerBox .outer.on .right .rect {animation: timer 2s linear both;}
+#container .mainContent .cakeSlide .control .timerBox .outer.on .left .rect {animation: timer 2s linear both 2s;}
+#container .mainContent .cakeSlide .control .timerBox .outer.on2 .right .rect {animation: timer2 2s linear both;}
+#container .mainContent .cakeSlide .control .timerBox .outer.on2 .left .rect {animation: timer2 2s linear both 2s;}
+#container .mainContent .cakeSlide .control .timerBox .outer .circle {position: absolute; width: 28px; height: 28px; border: 4px solid rgba(255,255,255,.5); background: transparent; border-radius: 50%; top: 50%; transform: translateY(-50%);}
+#container .mainContent .cakeSlide .control .timerBox .right .circle {right: 0;} 
+#container .mainContent .cakeSlide .control .timerBox .left .circle {left: 0;}
+#container .mainContent .cakeSlide .control .timerBox .inner {position: absolute; width: 10px; height: 10px; background: #fff; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 50%;}
+#container .mainContent .cakeSlide .control .nameTxt {width: 180px;}
+#container .mainContent .cakeSlide .control .nameTxt span {color: rgba(255,255,255,.7); display: inline-block; font-size: 0.8rem;}
+#container .mainContent .cakeSlide .control .nameTxt span:first-child {font-size: 1rem; font-weight: 900; text-align: right; color: rgba(255,255,255,.9);}
+#container .mainContent .cakeSlide .control .arrowBtn {width: 68px; height: 68px; background: #f7f0e8; border-radius: 50%; overflow: hidden;}
+#container .mainContent .cakeSlide .control .arrowBtn a {float: left; height: 100%; width: 50%; line-height: 68px; text-align: center; color: #fcb040; font-size: 1.4rem; transition: 0.3s ease;}
+#container .mainContent .cakeSlide .control .arrowBtn .next {float: right; background: rgba(252,176,64,.2);}
+#container .mainContent .cakeSlide .control .arrowBtn a:hover {color: #fff;}
+#container .mainContent .kakao {position: absolute; width: 88px; height: 88px; border-radius: 50%; background: #7a3412; left: 11%; bottom: 97px; text-align: center; padding-right: 3px;}
+#container .mainContent .kakao a {display: block;}
+#container .mainContent .kakao:before {content: ''; position: absolute; top: -3px; left: -3px; width: 100%; height: 100%; background: #ffdd1f; border-radius: 50%;}
+#container .mainContent .kakao i {position: relative; font-size: 30px; color: #fff; padding: 5px 0 3px;}
+#container .mainContent .kakao p {position: relative; font-size: 1rem; color: #76350d; font-weight: 900; letter-spacing: -0.5px; line-height: 1;}
+#container .mainContent .kakao span {position: relative; font-size: 0.9rem; font-weight: 700;}
+/* quickMenu */
+#container .mainContent .quickMenu {position: absolute; top: 27%; right: 0;}
+#container .mainContent .quickMenu > div {position: absolute; width: 140px; right: 0; top: 0; height: 54px; box-shadow: 0 3px 5px 2px rgba(0,0,0,.1); cursor: pointer; transition: all 0.2s;}
+#container .mainContent .quickMenu > div:hover {width: 152px;}
+#container .mainContent .quickMenu > div:before {content: ''; top: 0; bottom: 0; left: 0; display: inline-block; position: absolute; background: rgba(52,25,0,.5); width: 5px;}
+#container .mainContent .quickMenu .list1 {background: #61c8d7;}
+#container .mainContent .quickMenu .list2 {background: #e84242; top: 67px;}
+#container .mainContent .quickMenu h3 {font-size: 0.9rem; font-weight: normal; color: #fff; line-height: 54px; padding-left: 20px;}
+#container .mainContent .quickMenu i {font-size: 1.1rem; padding-right: 4px;}
+
+/* footer */
+#footer {position: fixed; width: 100%; height: 75px; background: #222; bottom: 0; left: 0;}
+#footer > div > div {float: left;}
+#footer .board {width: 42%; line-height: 75px; position: relative; color: rgba(255,255,255,.9);}
+#footer p {display: inline-block; text-indent: 0.5rem; font-size: 0.9rem;}
+#footer span {position: absolute; right: 0; margin-right: 110px;}
+#footer .snsBox {width: 16%; line-height: 75px; text-align: right;}
+#footer .snsBox .sns {display: inline-block; color: rgba(255,255,255,.5);}
+#footer .snsBox .sns i {vertical-align: middle; font-size: 1.5rem; padding: 0 7px;}
+#footer .snsBox img {padding-left: 20px;}
+
+
+
+
+@keyframes timer {
+    0% {}
+    100% {transform: rotate(0deg);}
+}
+@keyframes timer2 {
+    0% {}
+    100% {transform: rotate(0deg);}
+}

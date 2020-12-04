@@ -1,0 +1,37 @@
+@media only screen and (max-width: 1270px) {
+.row {max-width: 95%;}
+#header .navBox {top: 25%; left: 110px;}
+#header .logBox {top: 25%;}
+#header .navBox .depth1 > li > a {padding: 15px 10px;}
+#header .searchBox {position: relative; text-align: right; right: 0; top: -30px; transform: translateY(0)}
+#header .searchBox form {width: 30%; display: inline-block;}
+#header .searchBox fieldset {text-align: left; padding-right: 0;}
+#header .searchBox input {width: 86%;}
+
+}
+
+
+@media only screen and (max-width: 800px) {
+#header {top: 0; background: #fff; height: 130px;}
+#header h1 a {display: block;}
+#header .logBox {top: 20px;}
+#header .logBox a {padding: 0 4px;}
+#header .logBox a i {display: inline-block;}
+#header .logBox a:first-child:before {display: none;}
+#header .logBox a span {display: none;}
+#header .searchBox {position: absolute; top: 70%;}
+#header .searchBox form {width: auto;}
+#header .searchBox fieldset {background: transparent; border: 1px solid #fcb040;}
+#header .searchBox input {width: auto;}
+#header .searchBox button {padding-right: 15px;}
+#header .navBox {position: fixed; width: 100%; top: 130px; transform: translateY(0); left: 0; background: #333; }
+#header .navBox .depth1 > li:first-child .depth2 {left: 0%; transform: translateX(0%);}
+#header .navBox .depth1 > li:last-child .depth2 {right: 0%; transform: translateX(0%);}
+#header .navBox .depth1 > li {width: 19%;}
+#header .navBox .depth1 > li > a {color: #fff; font-size: 0.9rem; letter-spacing: -1px;}
+#header .navBox .depth1 > li.mobile > a {background: #fcb040;}
+#header .navBox .depth1 > li > a > span {display: none;}
+#header .navBox .depth2 {font-size: 0.8rem;}
+#container .mainContent .quickMenu {display: none;}
+
+}
