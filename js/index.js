@@ -1,7 +1,7 @@
 (function($){
 
     // Link
-    $('body').on('click', '.navBox .depth2 > li > a', function(){
+    $('body').on('click', '.navBox .depth2 > li > a.sub', function(){
         var url = this.href
         $('body').addClass('sub')
         $('#container > #content').remove()
