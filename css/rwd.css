@@ -1,9 +1,9 @@
 @media only screen and (max-width: 1270px) {
 .row {max-width: 95%;}
-#header .navBox {top: 25%; left: 110px;}
+#header .navBox {top: 25%;}
 #header .logBox {top: 25%;}
 #header .navBox .depth1 > li > a {padding: 15px 10px;}
-#header .searchBox {position: relative; text-align: right; right: 0; top: -30px; transform: translateY(0)}
+#header .searchBox {position: relative; text-align: right; right: 0; top: -10px; transform: translateY(0)}
 #header .searchBox form {width: 30%; display: inline-block;}
 #header .searchBox fieldset {text-align: left; padding-right: 0;}
 #header .searchBox input {width: 86%;}
